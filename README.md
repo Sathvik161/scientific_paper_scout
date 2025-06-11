@@ -34,7 +34,6 @@ scientific-paper-scout/
 ├── requirements.txt
 └── README.md
 ```
-```
 
 ---
 
