@@ -1,4 +1,3 @@
-Here's a properly formatted and consistent version of your `README.md` with uniform heading levels (`##` for sections, `###` for subsections) and consistent code block formatting:
 
 ```markdown
 # 🧠 Scientific Paper Scout
