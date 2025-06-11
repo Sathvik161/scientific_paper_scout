@@ -1,40 +1,45 @@
-Absolutely! Here's a clean, professional `README.md` for your **Scientific Paper Scout** project, explaining what it does, how to install and run it, and how to use the summarization endpoint:
+
 
 ---
 
-````markdown
+```markdown
 # 🧠 Scientific Paper Scout
 
-Scientific Paper Scout is a local AI assistant that summarizes scientific papers (PDFs) using powerful LLMs like Groq's LLaMA 3. The project provides a FastAPI backend where you can upload a PDF and get a concise summary of the content.
+**Scientific Paper Scout** is a local AI assistant that summarizes scientific papers (PDFs) using powerful LLMs like Groq's LLaMA 3. It features a FastAPI backend where you can upload a PDF and get a concise, meaningful summary of its content.
 
 ---
 
 ## 🚀 Features
 
-- 🔍 Extracts and reads content from scientific PDFs
-- 🧠 Summarizes papers using LLaMA 3 via Groq API
-- ⚡ FastAPI backend with interactive `/docs` UI
-- 🔐 Secure and modular codebase with `.env` support
+- 🔍 Extracts and parses scientific paper PDFs
+- 🧠 Summarizes papers using Groq’s LLaMA 3 (`llama3-8b-8192`)
+- ⚡ FastAPI backend with interactive Swagger UI
+- 🔐 Secure, modular, and `.env`-configurable
 
 ---
 
 ## 📁 Project Structure
 
+```
+
 scientific-paper-scout/
 ├── agent/
-│ ├── main.py
-│ ├── agent_host.py
-│ ├── llm_provider.py
-│ ├── logger.py
-│ └── .env
-├── mcp_servers/
-│ ├── paper_search/
-│ │ └── server.py
-│ └── pdf_summarize/
-│ └── server.py
+│   ├── main.py               # Entry point for agents
+│   ├── agent\_host.py         # Hosts the agent for orchestrating tasks
+│   ├── llm\_provider.py       # LLM integration logic (Groq by default)
+│   ├── logger.py             # Centralized logging setup
+│   └── .env                  # Environment configuration (not committed)
+├── mcp\_servers/
+│   ├── paper\_search/
+│   │   └── server.py         # (Optional) Endpoint for paper search (future scope)
+│   └── pdf\_summarize/
+│       └── server.py         # Main FastAPI server for PDF summarization
 ├── shared/
-│ └── utils.py
+│   └── utils.py              # Common helper functions
+├── requirements.txt
 └── README.md
+
+````
 
 ---
 
@@ -45,15 +50,18 @@ scientific-paper-scout/
 ```bash
 git clone https://github.com/your-username/scientific_paper_scout.git
 cd scientific_paper_scout
-```
 ````
 
 ### 2. Set up a virtual environment
 
 ```bash
+# On Linux/macOS
 python -m venv venv
-source venv/bin/activate        # On Linux/macOS
-venv\Scripts\activate           # On Windows
+source venv/bin/activate
+
+# On Windows
+python -m venv venv
+venv\Scripts\activate
 ```
 
 ### 3. Install dependencies
@@ -62,9 +70,9 @@ venv\Scripts\activate           # On Windows
 pip install -r requirements.txt
 ```
 
-### 4. Set up environment variables
+### 4. Configure environment variables
 
-Create a `.env` file in the root directory:
+Create a `.env` file in the root directory with the following content:
 
 ```env
 LLM_PROVIDER=groq
@@ -75,20 +83,25 @@ GROQ_API_KEY=your_groq_api_key
 
 ## ▶️ Run the Server
 
+Start the PDF summarization server using:
+
 ```bash
 uvicorn mcp_servers.pdf_summarize.server:app --reload
 ```
 
-Visit the interactive API docs at:
+Then open your browser to the Swagger UI:
+
 👉 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+---
 
 ## 🧠 LLM Support
 
-Currently supports:
+Currently supported:
 
-- ✅ [Groq](https://groq.com/) (LLaMA 3 via `llama3-8b-8192` model)
+* ✅ **Groq** (`llama3-8b-8192`)
 
-You can easily extend support to Anthropic, OpenAI, etc., by updating `llm_provider.py`.
+> You can easily extend support to other providers like OpenAI or Anthropic by modifying `agent/llm_provider.py`.
 
 ---
 
@@ -100,21 +113,23 @@ You can easily extend support to Anthropic, OpenAI, etc., by updating `llm_provi
 }
 ```
 
+---
+
 ## 📜 License
 
-MIT License – feel free to use and modify this project.
+This project is licensed under the **MIT License** – feel free to use, modify, and distribute it.
 
 ---
 
 ## ✨ Acknowledgements
 
-- [FastAPI](https://fastapi.tiangolo.com/)
-- [Groq](https://groq.com/)
-- [PyMuPDF](https://pymupdf.readthedocs.io/)
+* [FastAPI](https://fastapi.tiangolo.com/)
+* [Groq](https://groq.com/)
+* [PyMuPDF](https://pymupdf.readthedocs.io/)
 
 ```
 
 ---
 
-
+Let me know if you’d like a matching `requirements.txt`, `.gitignore`, or deployment instructions (e.g., Docker or Render).
 ```
