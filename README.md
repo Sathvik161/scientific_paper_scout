@@ -1,5 +1,4 @@
 
-```markdown
 # 🧠 Scientific Paper Scout
 
 **Scientific Paper Scout** is a local AI assistant that summarizes scientific papers (PDFs) using powerful LLMs like Groq's LLaMA 3. It features a FastAPI backend where you can upload a PDF and get a concise, meaningful summary of its content.
@@ -14,6 +13,7 @@
 - 🔐 Secure, modular, and `.env`-configurable
 
 ---
+```markdown
 
 ## 📁 Project Structure
 
