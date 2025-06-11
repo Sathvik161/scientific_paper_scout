@@ -1,6 +1,4 @@
-
-
----
+Here's a properly formatted and consistent version of your `README.md` with uniform heading levels (`##` for sections, `###` for subsections) and consistent code block formatting:
 
 ```markdown
 # 🧠 Scientific Paper Scout
@@ -21,25 +19,23 @@
 ## 📁 Project Structure
 
 ```
-
 scientific-paper-scout/
 ├── agent/
 │   ├── main.py               # Entry point for agents
-│   ├── agent\_host.py         # Hosts the agent for orchestrating tasks
-│   ├── llm\_provider.py       # LLM integration logic (Groq by default)
+│   ├── agent_host.py         # Hosts the agent for orchestrating tasks
+│   ├── llm_provider.py       # LLM integration logic (Groq by default)
 │   ├── logger.py             # Centralized logging setup
 │   └── .env                  # Environment configuration (not committed)
-├── mcp\_servers/
-│   ├── paper\_search/
+├── mcp_servers/
+│   ├── paper_search/
 │   │   └── server.py         # (Optional) Endpoint for paper search (future scope)
-│   └── pdf\_summarize/
+│   └── pdf_summarize/
 │       └── server.py         # Main FastAPI server for PDF summarization
 ├── shared/
 │   └── utils.py              # Common helper functions
 ├── requirements.txt
 └── README.md
-
-````
+```
 
 ---
 
@@ -50,7 +46,7 @@ scientific-paper-scout/
 ```bash
 git clone https://github.com/your-username/scientific_paper_scout.git
 cd scientific_paper_scout
-````
+```
 
 ### 2. Set up a virtual environment
 
@@ -126,10 +122,5 @@ This project is licensed under the **MIT License** – feel free to use, modify,
 * [FastAPI](https://fastapi.tiangolo.com/)
 * [Groq](https://groq.com/)
 * [PyMuPDF](https://pymupdf.readthedocs.io/)
-
 ```
 
----
-
-Let me know if you’d like a matching `requirements.txt`, `.gitignore`, or deployment instructions (e.g., Docker or Render).
-```
