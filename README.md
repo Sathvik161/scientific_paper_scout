@@ -17,7 +17,6 @@
 
 ## 📁 Project Structure
 
-```
 scientific-paper-scout/
 ├── agent/
 │   ├── main.py               # Entry point for agents
@@ -34,6 +33,7 @@ scientific-paper-scout/
 │   └── utils.py              # Common helper functions
 ├── requirements.txt
 └── README.md
+```
 ```
 
 ---
