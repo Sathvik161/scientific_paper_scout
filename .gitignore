@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pkl
+*.sqlite3
+*.log
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+
+
+# Environment Variables
+.env
+
+# Coverage and testing
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+

@@ -1,0 +1,16 @@
+# CLI and agent
+typer
+rich
+
+# LLM and PDF handling
+Groq
+requests
+PyMuPDF # Used for PDF text extraction
+
+# FastAPI MCP servers
+fastapi
+uvicorn
+httpx
+
+# For parsing arXiv XML
+lxml
